@@ -43,7 +43,7 @@ export default function Cesta(props) {
                 </div>
                 <hr/> 
                 <div className="row">
-                    <button onClick={()=> alert('implement checkout')}>
+                    <button onClick={()=> alert('...')}>
                         Pagar
                     </button>
 
