@@ -1,13 +1,13 @@
 import React from 'react';
-import Producto from './Producto';
+import Nintendo from './Nintendo';
 
 export default function Body(props) {
     const {productos, onAdd} = props;
     return <main className="block col-2">
-        <h2>Productos</h2>
+        <h1>Nintendo</h1>
         <div className="row">
             {productos.map((producto) => (
-                <Producto key={producto.id} producto={producto} onAdd={onAdd}></Producto>
+                <Nintendo key={producto.id} producto={producto} onAdd={onAdd}></Nintendo>
                 
             ))}
         </div>

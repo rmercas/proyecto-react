@@ -1,6 +1,6 @@
 import React from 'react'
 
-export default function Producto(props) {
+export default function Nintendo(props) {
     const {producto, onAdd} = props;
     return (
         <div>
