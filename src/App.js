@@ -37,7 +37,7 @@ function App() {
 
   return (
     <div className="App">
-      <Header></Header>
+      <Header countCartItems={cartItems.length}></Header>
       <div className="row">
         <Body onAdd={onAdd} productos={productos}></Body>
         <Cesta onAdd={onAdd} cartItems={cartItems} onRemove={onRemove}></Cesta>

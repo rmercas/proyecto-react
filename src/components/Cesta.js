@@ -7,15 +7,15 @@ export default function Cesta(props) {
     const envio = precioNeto > 2000 ? 0 : 50;
     const  precioTotal = precioNeto + impuestos + envio;
     return (
-        <aside className="block .col-1">
+        <aside className="block col-1">
             <h2>Cart </h2>
             <div>{cartItems.length === 0 && <div>El carrito está vacío</div>}</div>
             {cartItems.map((item) => (
                 <div key={cartItems.id} className="row">
                     <div className="col-2">{item.nombre}</div>
                     <div className="col-2">
-                        <button onClick={() => onAdd(item)} className="add">+</button>
-                        <button onClick={() => onRemove(item)} className="remove">-</button>
+                        <button onClick={() => onAdd(item)} className="añadir">+</button>
+                        <button onClick={() => onRemove(item)} className="remover">-</button>
                     </div>
                     <div className="col-2 text-right">
                         {item.qty} x ${item.precio.toFixed(2)}
@@ -41,6 +41,14 @@ export default function Cesta(props) {
                     <div className="col-2"><strong>Total</strong></div>
                     <div className="col-1 text-right"><strong>${precioTotal.toFixed(2)}</strong></div>
                 </div>
+                <hr/> 
+                <div className="row">
+                    <button onClick={()=> alert('implement checkout')}>
+                        Pagar
+                    </button>
+
+                </div>
+                
                 </>
             )}
         </aside>

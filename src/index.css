@@ -18,6 +18,10 @@ h3 {
 a {
   text-decoration: none;
 }
+
+.sectionList{
+width: 20%;
+}
 .row {
   display: flex;
   justify-content: space-between;
