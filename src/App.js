@@ -4,9 +4,17 @@ import Body from './components/Body';
 import Cesta from './components/Cesta';
 import data from './data';
 import { useState } from 'react';
+import dataInicio from './dataInicio';
+import BodyInicio from './components/BodyInicio';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+ } from "react-router-dom";
 
 
 function App() {
+  const { productosInicio } = dataInicio;
   const { productos } = data;
   const [cartItems, setCartItems] = useState([]);
   const onAdd = (producto) => {
@@ -36,14 +44,33 @@ function App() {
   })
 
   return (
-    <div className="App">
-      <Header countCartItems={cartItems.length}></Header>
-      <div className="row">
-        <Body onAdd={onAdd} productos={productos}></Body>
-        <Cesta onAdd={onAdd} cartItems={cartItems} onRemove={onRemove}></Cesta>
-      </div>
-    </div>
+    <Router>
+      
+      <div className="App">
+        <Header countCartItems={cartItems.length}></Header>
+        <div className="row">
 
+          <Switch>
+            <Route path="/" excact>
+
+            <BodyInicio onAdd={onAdd} productosInicio={productosInicio}></BodyInicio>
+
+
+            </Route>
+            <Route path="/Nintendo">
+
+              <Body onAdd={onAdd} productos={productos}></Body>
+              <Cesta onAdd={onAdd} cartItems={cartItems} onRemove={onRemove}></Cesta>
+
+            </Route>
+
+
+          </Switch>
+
+        </div>
+
+      </div>
+    </Router>
   );
 }
 

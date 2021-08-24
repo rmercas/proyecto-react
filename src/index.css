@@ -19,6 +19,16 @@ a {
   text-decoration: none;
 }
 
+li{
+  list-style: none;
+  padding: 10px
+  
+}
+
+ul {
+  display: flex;
+  
+}
 .sectionList{
 width: 20%;
 }

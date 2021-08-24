@@ -1,33 +1,48 @@
 import React from 'react';
+import { link, linkNav } from 'react-router-dom';
+
+
 
 export default function Header(props) {
     const { countCartItems } = props;
     return (
-        <header className="row block center">
-            <div>
-                <a href="#/">
-                    <h1>Tienda de Videojuegos</h1>
-                </a>
-            </div>
-            <div className="sectionList row ">
-                <div>
-                    <a href="#/">
-                        Nintendo
-                    </a>
-                </div>
-                <div>
-                    <a href="#/">
-                        Play Station
-                    </a>
-                </div>
-                <div>
-                    <a href="#/">
-                        Xbox
-                    </a>
-                </div>
-            </div>
 
+        <header className="row block center">
+        
+                <div>
+                Tienda de Videojuegos
+
+      
+                </div>
+     
             <div>
+            <ul>
+
+<li>
+    
+        Inicio
+    
+</li>
+<li>
+    
+        Nintendo
+    
+</li>
+<li>
+    
+        Xbox
+   
+</li>
+<li>
+   
+        Play Station
+  
+</li>
+
+
+</ul>
+</div>
+           <div>
                 <a href="#/cart">
 
                     Cesta {''}
@@ -37,7 +52,7 @@ export default function Header(props) {
                         ''
                     )}
                 </a> {''}
-             
+
             </div>
 
         </header>
