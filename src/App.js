@@ -51,7 +51,7 @@ function App() {
         <div className="row">
 
           <Switch>
-            <Route path="/" excact>
+            <Route path="/" exact>
 
             <BodyInicio onAdd={onAdd} productosInicio={productosInicio}></BodyInicio>
 
